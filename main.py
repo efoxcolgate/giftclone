@@ -1,15 +1,18 @@
 from fastapi import FastAPI
 import uvicorn
 
+
 app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello Erika!"}
+     """Scrabble Microservice"""
+     return {"message": "Hello, welcome to ScrabbleHelper! Enter a word to calculate it's score."}
 
 @app.get("/scrabblehelper/{word}")
 async def scrabblehelper(word: str):
-    scores={ 'a':1,
+     """calculate scrabble score"""
+     scores={ 'a':1,
             'b':3,
             'c':3,
             'd':2,
@@ -35,12 +38,12 @@ async def scrabblehelper(word: str):
             'x':8,            
             'y':4,
             'z':10}
-    sum1 = 0
-    for char in word:
-        sum1=sum1+scores[char]
+     sum1 = 0
+     for char in word:
+         sum1=sum1+scores[char]
 
 
-    return {"score": sum1}
+     return {"score": sum1}
 
 if __name__ == '__main__':
     uvicorn.run(app, port=8080, host='0.0.0.0')
