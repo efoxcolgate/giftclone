@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    """Scrabble Microservice"""
+    """Scrabble Microservice Welcome"""
     return {"message": "Hello, welcome to ScrabbleHelper! Enter a word to calculate it's score."}
 
 @app.get("/scrabblehelper/{word}")
