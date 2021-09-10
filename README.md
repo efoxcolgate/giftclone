@@ -1,3 +1,4 @@
+[![Pylint](https://github.com/efoxcolgate/giftclone/actions/workflows/pylint.yml/badge.svg)](https://github.com/efoxcolgate/giftclone/actions/workflows/pylint.yml)
 # fastapi
 Demo of FastAPI + AWS App Runner
 
